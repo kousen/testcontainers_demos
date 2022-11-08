@@ -8,6 +8,8 @@ import java.sql.SQLException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+// from https://github.com/testcontainers/testcontainers-java
+// Note: only indication this uses TC is the "tc" in the DB URL (!)
 public class OracleJDBCDriverTest {
 
     @Test

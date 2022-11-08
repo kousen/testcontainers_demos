@@ -12,6 +12,8 @@ import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+// from https://github.com/testcontainers/testcontainers-java
+// with additional method (checkRickRolling)
 @SuppressWarnings("resource")
 public class BaseWebDriverContainerTest {
 

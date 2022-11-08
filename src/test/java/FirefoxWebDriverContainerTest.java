@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testcontainers.containers.BrowserWebDriverContainer;
 
+// from https://github.com/testcontainers/testcontainers-java
 @SuppressWarnings("resource")
 public class FirefoxWebDriverContainerTest extends BaseWebDriverContainerTest {
 
@@ -14,7 +15,7 @@ public class FirefoxWebDriverContainerTest extends BaseWebDriverContainerTest {
             .withNetwork(NETWORK);
 
     @Before
-    public void checkBrowserIsIndeedChrome() {
+    public void checkBrowserIsIndeedFirefox() {
         assertBrowserNameIs(firefox, "firefox");
     }
 

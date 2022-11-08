@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
+// from Testcontainers home page Quickstart
+//    https://www.testcontainers.org/quickstart/junit_5_quickstart/
 public class RedisBackedCacheIntStep0Test {
 
     private RedisBackedCache underTest;

@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testcontainers.containers.BrowserWebDriverContainer;
 
+// from https://github.com/testcontainers/testcontainers-java
 @SuppressWarnings("resource")
 public class ChromeWebDriverContainerTest extends BaseWebDriverContainerTest {
 

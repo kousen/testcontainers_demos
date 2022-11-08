@@ -10,29 +10,39 @@ repositories {
 }
 
 dependencies {
+    // SLF4J and logback
     implementation 'org.slf4j:slf4j-api:2.0.3'
     implementation 'ch.qos.logback:logback-classic:1.4.4'
 
+    // Redis
     implementation 'redis.clients:jedis:4.3.1'
-    implementation 'com.redislabs:testcontainers-redis:1.1.6'
+    testImplementation 'com.redislabs:testcontainers-redis:1.1.6'
 
+    // Neo4j
     testImplementation 'org.neo4j.driver:neo4j-java-driver:5.2.0'
-    implementation 'com.zaxxer:HikariCP:5.0.1'
-    implementation 'commons-dbutils:commons-dbutils:1.7'
 
+    // DB connection pool
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+
+    // Oracle
+    runtimeOnly 'com.oracle.ojdbc:ojdbc8:19.3.0.0'
+    implementation 'commons-dbutils:commons-dbutils:1.7' // for Oracle demo
+
+    // Selenium (Webdriver) API and browser drivers
+    implementation 'org.seleniumhq.selenium:selenium-api:4.5.3'
     implementation 'org.seleniumhq.selenium:selenium-remote-driver:4.5.3'
     implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.5.3'
     implementation 'org.seleniumhq.selenium:selenium-firefox-driver:4.5.3'
-    implementation 'org.seleniumhq.selenium:selenium-api:4.5.3'
 
+    // Testcontainers
     testImplementation platform('org.testcontainers:testcontainers-bom:1.17.5')
     testImplementation('org.testcontainers:junit-jupiter')
     testImplementation('org.testcontainers:spock')
     testImplementation('org.testcontainers:selenium')
     testImplementation 'org.testcontainers:neo4j'
     testImplementation 'org.testcontainers:oracle-xe'
-    runtimeOnly 'com.oracle.ojdbc:ojdbc8:19.3.0.0'
 
+    // JUnit, AssertJ, Spock
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.1'
     testImplementation('org.assertj:assertj-core:3.23.1')

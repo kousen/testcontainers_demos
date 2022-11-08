@@ -7,6 +7,8 @@ import org.testcontainers.utility.DockerImageName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+// from https://www.testcontainers.org/quickstart/junit_5_quickstart/
+//   with isStarted addition to use JUnit 5 assumptions
 @SuppressWarnings("resource")
 @Testcontainers
 public class RedisBackedCacheIntTest {
